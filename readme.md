@@ -1,0 +1,1 @@
+![alt text](https://github.com/OneTechSavvy/strapi-chatgpt-integration/blob/main/image.jpg?raw=true)
