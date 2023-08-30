@@ -1,9 +1,9 @@
 module.exports = {
   routes: [
     {
-     method: 'GET',
-     path: '/strapi-chat',
-     handler: 'strapi-chat.exampleAction',
+     method: 'POST',
+     path: '/strapi-chat/chat',
+     handler: 'strapi-chat.chat',
      config: {
        policies: [],
        middlewares: [],

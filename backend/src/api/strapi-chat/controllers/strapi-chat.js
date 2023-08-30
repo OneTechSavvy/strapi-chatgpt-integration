@@ -1,15 +1,20 @@
-'use strict';
+"use strict";
 
 /**
  * A set of functions called "actions" for `strapi-chat`
  */
 
 module.exports = {
-  exampleAction: async (ctx, next) => {
+  chat: async (ctx) => {
     try {
-      ctx.body = 'ok';
+      const response = await strapi
+        .service("api::strapi-chat.strapi-chat")
+        .chat(ctx);
+
+      ctx.body = { data: response };
     } catch (err) {
-      ctx.body = err;
+      console.log(err.message);
+      throw new Error(err.message);
     }
-  }
+  },
 };
